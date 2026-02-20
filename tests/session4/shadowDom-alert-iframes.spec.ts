@@ -3,6 +3,7 @@ import test from "@playwright/test";
 test("handling shadodom element", async({page})=>
 {
     await page.goto("https://shop.polymer-project.org/");
+    
 
     //xpath cannto pierce shadow dom: hence we need to use css here
     await page.locator('a[href="/list/mens_outerwear"]').nth(1).click();
